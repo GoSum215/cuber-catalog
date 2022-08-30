@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="(min-width:200px) and (max-width:820px)" href="mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="all">
+    <div class="content">
+        <div class="name_mobile">Название: Платье</div>
+        <div class="images">
+            <img src="assets/model_1.png" class="main_photo">
+            <img src="assets/model_2.png" class="main_photo">
+            <img src="assets/model_3.png" class="main_photo">
+            <img src="assets/model_4.png" class="main_photo">
+            <img src="assets/model_5.png" class="main_photo">
+            <img src="assets/model_6.png" class="main_photo">
+            <img src="assets/model_7.png" class="main_photo">
+            <img src="assets/model_8.png" class="main_photo">
+            <img src="assets/model_9.png" class="main_photo">
+        </div>
+        <section class="all_photos">
+            <div class="scroll_photo">
+                <img src="assets/model_1.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_2.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_3.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_4.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_5.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_6.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_7.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_8.png" class="select_photo">
+            </div>
+            <div class="scroll_photo">
+                <img src="assets/model_9.png" class="select_photo">
+            </div>
+        </section>
+    </div>
+
+    <div class="description">
+        <div class="back">
+            <a href="#">< Вернуться в каталог</a>
+        </div>
+        <div class="name">ПЛАТЬЕ GORANSKAYA L</div>
+        <div class="desc">
+            Платье выполнено в сочетании морского и спортивного стиля. Широкие трикотажные брюки, красно-белая тельняшка с вышивкой-аппликацией «Тигр» и жилет из трикотажного полотна дополняет образ и подчеркивает Приморский характер.
+        </div>
+        <div class="ar_button">
+            <a href="#">СМОТРЕТЬ в AR</a>
+        </div>
+        <div class="horizontal_line"></div>
+        <div class="designer">О ДИЗАЙНЕРЕ И БРЕНДЕ</div>
+        <div class="info">Горанская Людмила – дизайнер одежды, модельер-конструктор, победитель и участник многих международных конкурсов дизайнеров одежды (Германия, Китай, Россия).</div>
+        <div class="link_telegram">
+            <a href="#">TELEGRAM ДИЗАЙНЕРА</a>
+        </div>
+        <div class="info">Локальный бренд авторской одежды Горанская Людмила (Goranskaya L) - это сохранение национальных, региональных и имиджевых компонентов через визуализацию и айдентику Приморского края. Здесь рождается одежда с приморским характером, пронизанная духом свободы. Это не просто одежда, это отражение характера, стиля и даже настроения. Часто используем символику Владивостока и Приморского края разрабатываем принты и наносим их на одежду в технике вышивки аппликации. Одежда создается небольшим количеством прямо в студии, без фабрик и массовых потоков.
+            Необычные формы, качественные ткани, принты, разработанные и выполненные вручную – можно не сомневаться, что Ваш образ будет неповторим.
+        </div>
+    </div>
+</div>
+<script>
+    let main_photo = document.getElementsByClassName('main_photo');
+    let select_photo = document.getElementsByClassName('select_photo');
+
+    let n = select_photo.length;
+
+    if (n === 1) {
+        document.getElementsByClassName('all_photos')[0].style.display = 'none'
+    }
+
+    let cur = 0;
+
+    for (let i = 0; i < n; i++) {
+        select_photo[i].addEventListener("click", function (evt) {
+            if (cur !== i) {
+                // main_photo[cur].style.position = 'absolute';
+                main_photo[cur].style.opacity = '0';
+                main_photo[cur].style.zIndex = '-1';
+                // main_photo[i].style.position = 'relative';
+                main_photo[i].style.opacity = '1';
+                main_photo[i].style.zIndex = '10';
+                cur = i;
+            }
+        });
+    }
+</script>
+</body>
+</html>

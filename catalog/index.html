@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" media="(min-width:200px) and (max-width:820px)" href="mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="description">
+<!--    <div class="desc_main">-->
+    <div class="desc_1row">ВЫБЕРИ СВОЙ СТИЛЬ</div>
+    <div class="desc_2row">Здесь представлен каталог самых разных ателье и дизайнеров.
+        <br>
+        Специальные коллекции одежды и аксессуаров от участников проекта Киберателье.</div>
+    <div class="header_photo">
+        <img src="assets/header_photo_background.jfif">
+    </div>
+    <div class="header_cubes">
+        <img src="assets/cubes.png">
+    </div>
+    <div class="header_small_cubes">
+        <img src="assets/small_cubes.png">
+    </div>
+<!--    </div>-->
+</div>
+
+<div class="filters">
+    <div class="filter">
+        <p class="filter_title">ДЛЯ КОГО?</p>
+        <form method="get" id="filterForm">
+            <div class="radio_div">
+                <input type="checkbox" class="custom-checkbox" id="woman" name="filt" value="1" onchange="">
+                <label for="woman">женская</label>
+            </div>
+
+            <div class="radio_div">
+                <input type="checkbox" class="custom-checkbox" id="man" name="filt" value="2">
+                <label for="man">мужская</label>
+            </div>
+
+            <div class="radio_div">
+                <input type="checkbox" class="custom-checkbox" id="different" name="filt" value="3" >
+                <label for="different">унисекс</label>
+            </div>
+        </form>
+    </div>
+    <div class="sort">
+        <p class="filter_title">СОРТИРОВКА</p>
+        <form method="get" id="sortForm">
+
+        <div class="radio_div">
+            <input type="radio" class="custom-checkbox" id="new" name="sort" value="1" checked>
+            <label for="new">сначала новые</label>
+        </div>
+
+        <div class="radio_div">
+            <input type="radio" class="custom-checkbox" id="old" name="sort" value="2" >
+            <label for="old">сначала старые</label>
+        </div>
+    </form>
+    </div>
+    <div class="clear_filter">
+        <p class="filter_title">СБРОС</p>
+    </div>
+</div>
+
+<div class="line">
+    <a href="#">
+        <div class="card">
+            <img src="assets/model_1.png" class="img">
+            <div class="caption">Наименование товара 1</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+            <img src="assets/model_2.png" class="img">
+            <div class="caption">Наименование товара 2</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+            <img src="assets/model_3.png" class="img">
+            <div class="caption">Наименование товара 3</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+            <img src="assets/model_4.png" class="img">
+            <div class="caption">Наименование товара 4</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+            <img src="assets/model_5.png" class="img">
+            <div class="caption">Наименование товара 5</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+                <img src="assets/model_6.png" class="img">
+            <div class="caption">Наименование товара 6</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+                <img src="assets/model_7.png" class="img">
+            <div class="caption">Наименование товара 7</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+                <img src="assets/model_8.png" class="img">
+            <div class="caption">Наименование товара 8</div>
+        </div>
+    </a>
+    <a href="#">
+        <div class="card">
+                <img src="assets/model_9.png" class="img">
+            <div class="caption">Наименование товара 9</div>
+        </div>
+    </a>
+
+</div>
+
+</body>
+</html>

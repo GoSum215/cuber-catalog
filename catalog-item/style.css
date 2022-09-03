@@ -12,7 +12,6 @@ body {
 
 .content {
     width: 38vw;
-    height: 52vw;
     margin: 0 1vw;
 }
 
@@ -93,6 +92,10 @@ div.scroll_photo img {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.25vw;
+}
+
+.back_mobile {
+    display: none;
 }
 
 .desc {

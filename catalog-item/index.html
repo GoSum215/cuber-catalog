@@ -13,7 +13,10 @@
 
 <div class="all">
     <div class="content">
-        <div class="name_mobile">Название: Платье</div>
+        <div class="back_mobile">
+            <a href="#">< Вернуться в каталог</a>
+        </div>
+        <div class="name_mobile">ПЛАТЬЕ GORANSKAYA L</div>
         <div class="images">
             <img src="assets/model_1.png" class="main_photo">
             <img src="assets/model_2.png" class="main_photo">
@@ -26,7 +29,7 @@
             <img src="assets/model_9.png" class="main_photo">
         </div>
         <section class="all_photos">
-            <div class="scroll_photo">
+            <div class="scroll_photo active_photo">
                 <img src="assets/model_1.png" class="select_photo">
             </div>
             <div class="scroll_photo">
@@ -80,9 +83,9 @@
 </div>
 <script>
     let main_photo = document.getElementsByClassName('main_photo');
-    let select_photo = document.getElementsByClassName('select_photo');
+    let scroll_photo = document.getElementsByClassName('scroll_photo');
 
-    let n = select_photo.length;
+    let n = scroll_photo.length;
 
     if (n === 1) {
         document.getElementsByClassName('all_photos')[0].style.display = 'none'
@@ -91,14 +94,16 @@
     let cur = 0;
 
     for (let i = 0; i < n; i++) {
-        select_photo[i].addEventListener("click", function (evt) {
+        scroll_photo[i].addEventListener("click", function (evt) {
             if (cur !== i) {
                 // main_photo[cur].style.position = 'absolute';
                 main_photo[cur].style.opacity = '0';
                 main_photo[cur].style.zIndex = '-1';
+                scroll_photo[cur].classList.remove("active_photo");
                 // main_photo[i].style.position = 'relative';
                 main_photo[i].style.opacity = '1';
                 main_photo[i].style.zIndex = '10';
+                scroll_photo[i].classList.add("active_photo");
                 cur = i;
             }
         });
